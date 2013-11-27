@@ -1,0 +1,153 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#wrapper {
+	background: black;
+}
+
+#status {
+	color: #fff;
+	text-transform: uppercase;
+
+	.up {
+		&:after {
+			content: ' up';
+		}
+	}
+
+	.score {
+		padding-left: 10px;
+
+		&:before {
+			content: 'score ';
+		}
+	}
+}
+
+#stage {
+	.cell {
+		position: relative;
+
+		&:after {
+			content: "";
+			position: absolute;
+
+			background: url('../img/sprites.png') -40px -30px;
+		}
+	}
+
+	.dot {
+		&:after {
+			background-position: -6px -186px;
+			top: 10px;
+			left: 10px;
+			width: 10px;
+			height: 10px;
+		}
+	}
+
+	.tile {
+		&:after {
+			top: 0;
+			left: 0;
+			width: 20px;
+			height: 20px;
+			background: rgba(0, 0, 222, .7);
+		}
+	}
+
+
+	.blinky {
+		&:after {
+			top: 0;
+			left: 0;
+			width: 20px;
+			height: 20px;
+			background-position: -44px -82px;
+		}
+	}
+
+
+	.pinky {
+		&:after {
+			top: 0;
+			left: 0;
+			width: 20px;
+			height: 20px;
+			background-position: -44px -102px;
+		}
+	}
+
+	.pacman {
+		&.direction-1 {
+			&:after {
+				top: 0;
+				left: 0;
+				width: 20px;
+				height: 20px;
+				background-position: -4px -42px;
+			}
+		}
+
+		&.direction-2 {
+			&:after {
+				top: 0;
+				left: 0;
+				width: 20px;
+				height: 20px;
+				background-position: -4px -22px;
+			}
+		}
+
+		&.direction-4 {
+			&:after {
+				top: 0;
+				left: 0;
+				width: 20px;
+				height: 20px;
+				background-position: -4px -62px;
+			}
+		}
+
+		&.direction-8 {
+			&:after {
+				top: 0;
+				left: 0;
+				width: 20px;
+				height: 20px;
+				background-position: -4px -2px;
+			}
+		}
+	}
+
+}
+
+.row {
+	height: 20px;
+
+}
+
+.cell {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	overflow: hidden;
+}
+
+.dot {
+	position: relative;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -3px 0 0 -3px;
+		width: 6px;
+		height: 6px;
+		background: cyan;
+	}
+}
